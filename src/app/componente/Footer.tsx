@@ -1,8 +1,11 @@
+import Image from "next/image";
+import { Banner } from "./Footerbanner";
+
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-600 mt-40">
       {/* Newsletter Section */}
-
+      <Banner />
       {/* Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 lg:px-32 pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-20 text-center md:text-left">
@@ -10,7 +13,7 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="font-bold text-lg text-white">SHOP.CO</h3>
             <p className="text-sm mt-2">
-              We have offers that suit your style and which you're proud to
+              We have offers that suit your style and which you&#39;re proud to
               wear. From women to men.
             </p>
             <div className="flex justify-center md:justify-start gap-3 mt-4">
@@ -74,20 +77,23 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
           <p>Shop.co © 2000-2023, All Rights Reserved</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
               alt="Visa"
-              className="h-6"
+              width={40}
+              height={24}
             />
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
               alt="Mastercard"
-              className="h-6"
+              width={40}
+              height={24}
             />
-            <img
+            <Image
               src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png"
               alt="Paypal"
-              className="h-6"
+              width={60}
+              height={24}
             />
           </div>
         </div>

@@ -3,13 +3,14 @@ import Rendercard from "./componente/Render Cards Dynamically";
 import BrowseSection from "./componente/BrowseSection";
 import TestimonialsSection from "./componente/Review-section/review";
 import Footer from "./componente/Footer";
+
 export default function HeroSection() {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center bg-[#F2F0F1]  pl-[16px] pr-[16px] pt-[30px] relative ">
+      <div className="flex flex-col lg:flex-row items-center bg-[#F2F0F1] pl-[16px] pr-[16px] pt-[30px] relative">
         {/* Left Section: Text Content */}
-        <div className="flex-col lg:px-6  lg:py-8  lg:absolute  xm:items-center">
-          <div className="xm:flex xm:flex-col ">
+        <div className="flex-col lg:px-6 lg:py-8 lg:absolute xm:items-center">
+          <div className="xm:flex xm:flex-col">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight lg:w-[577px]">
               FIND CLOTHES THAT MATCH YOUR STYLE
             </h1>
@@ -48,17 +49,21 @@ export default function HeroSection() {
 
         {/* Right Section: Image */}
         <div className="xm:hidden lg:flex">
-          <img
+          <Image
             src="/Rectangle 2.png"
             alt="Fashionable Couple"
+            width={1200}
+            height={800}
             className="w-full h-auto object-cover"
           />
         </div>
       </div>
       <div className="lg:hidden">
-        <img
+        <Image
           src="/single image.png"
           alt="Fashionable Couple"
+          width={800}
+          height={600}
           className="w-full h-auto object-cover"
         />
       </div>
@@ -68,14 +73,13 @@ export default function HeroSection() {
         {[...Array(5)].map((_, index) => (
           <div
             key={index}
-            className="w-full  max-w-[80px] md:max-w-[100px] lg:max-w-[140px]"
+            className="w-full max-w-[80px] md:max-w-[100px] lg:max-w-[140px]"
           >
             <Image
               src={`/brand0${index + 1}.svg`}
               alt={`Brand ${index + 1}`}
-              layout="responsive"
-              height={40}
               width={140}
+              height={40}
               priority
             />
           </div>

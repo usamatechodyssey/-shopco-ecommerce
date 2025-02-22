@@ -1,6 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
@@ -31,9 +33,9 @@ export default function Home() {
 
           {/* Logo */}
           <div className="w-[126px] md:w-[160px]">
-            <a href="/">
+            <Link href="/">
               <Image src="/SHOP.CO.svg" height={25} width={159} alt="Logo" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -68,9 +70,11 @@ export default function Home() {
           {/* Search Bar */}
           <div className="hidden md:block md:w-[400px] lg:w-[600px]">
             <div className="relative">
-              <img
+              <Image
                 src="/serch gray.svg"
                 alt="Search Icon"
+                width={20}
+                height={20}
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
               />
               <input
